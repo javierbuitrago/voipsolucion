@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link href='https://fonts.googleapis.com/css?family=Lakki+Reddy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Caveat+Brush' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+
+<form name="login" onsubmit="return validateForm() ;" method="post">
+	
+	<h1 class="icon-share">FreeNet...<br> Software!!  </h1>
+	<h2>Identifiquese<span class="icon-heartbeat"></span></h2>
+
+	<input class="username" type="text" name="username" placeholder="Usuario / Cedula">
+	<input class="password" type="password" name="password" placeholder= "Contraseña / Celular">
+	<button type="button" class="submit" value="Ingresar" name="submit" onclick="validate()">Socio</button>
+	<button type="button" class="submit" value="Ingresar" name="submit" onclick="validate()">Cliente</button>
+
+
+
+</form>
+<script>
+	var count=2;
+
+	function validate(){
+		var un = document.login.username.value;
+		var pw = document.login.password.value;
+		var valid= false;
+		var usernameArray = ["admin","javire12"];
+		var passwordArray = ["12345","160520"];
+		for (var i = 0; i < usernameArray.length; i++) 
+		{
+			if ((un == usernameArray[i])&&(pw == passwordArray[i])) {
+				valid = true;
+				break;
+			}	
+		}
+			if (valid) {
+				alert("Login Successful");
+				window.location = "http://ingjavierbuitrago.com"
+				return false;
+			}
+			var again = "tries";
+			if (count == 1) {
+				again = "try"
+			}
+			if (count>=1) {
+				alert("digito mal el usuario o contraseña");
+				count--;
+
+			}
+			else {
+				alert("bloqueado por intentos fallidos, comuniquese con el administrador");
+				document.login.username.value = "bloqueado user";
+				document.login.password.value = "bloqueado pass";
+				document.login.username.disabled = true;
+				document.login.password.disabled = true;
+				return false;
+				}
+}
+
+
+
+</script>-->
+</body>
+</html>

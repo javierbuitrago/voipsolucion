@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1, user-scalable=no, maximun-scale=1, minimun-scalable=1">
+    <title>Soft FrreNet</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilosad.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/datepicker-es.js"></script>
+    
+</head>
+<body>
+<header>   
+    <div class="contenedor">
+        <h1 class="icon-globe">Admin freenet soft</h1>
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"></label>
+        <nav class="menu">
+            <a href="index.php">Inicio</a>
+            <a href="listaClientes.php">Clientes</a>
+            <a href="reportes.php">Reportes</a>
+            <a href="soporte.html">Soporte</a></nav>
+    </div>
+</header>
+    <div id="contheader">
+         <form method="post" action="guardar_prestamista.php" class="from-registro">
+            <div class="contprimario"><legend>Ingresar Datos Prestamista</legend>
+                
+                <input type="text" name="nom_pres" placeholder="Nombre" required>
+                
+                <input type="text" name="cedula_pres" placeholder="Cedula">
+                
+                <input type="text" name="email_pres" placeholder="@ email">
+                
+                <input type="text" name="celular_pres" placeholder="Celular" required>
+                
+                <input type="text" name="telefono_pres" value="" placeholder="Telfefono">
+                
+                <input type="text" name="usuario" value="" placeholder="Usuario" required>
+                
+                <input type="pass" name="clave" id="clave" placeholder="Ingrese clave" required>
+                                                            
+                <input type="pass" name="confir_clave" id="rclave" placeholder="Confirme clave" required>
+                                            
+                <button type="submit" onclick= "window.location.href='guardar_prestamista.php'" class="subCrear">Crear Prestamista</button>
+                                                        
+             </div>
+        </form>
+        
+
+    </div>
+    <div>
+		
+			<table id="lista_clientes" border=1 class="tablageneral" width="100%">
+				<tr>
+					<th width="70%"><b>Nombre</b></th>
+					<th width="14%"><b>Editar</b></th>
+					<th width="14%"><b>Eliminar</b></th>				
+				</tr>
+				<tbody>
+					<?php while($row=$resultado->fetch_assoc()){ ?>
+						<tr>
+							<td><?php echo $row['nombre_pres'];?>
+							</td>
+							
+							<td>
+								<a href="editar_pres.php"><span class="icon-edit"></span></a>
+							</td>
+							<td>
+								<a href="eliminar_pres.php?id=<?php echo $row['id'];?>"><span class="icon-trash"></span></a>
+							</td>
+						</tr>
+					
+				</tbody>
+
+			</table>
+    </div> 
+        
+   
+</body>
+</html>

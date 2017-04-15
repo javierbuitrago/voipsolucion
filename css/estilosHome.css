@@ -1,0 +1,158 @@
+@import url (http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(menu.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    
+    font-family: 'Open Sans',sans-serif;
+    background-color: black;
+}
+
+header {
+    
+    width: 100%;
+    height: 50px;
+    background-color: darkturquoise;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+    
+    
+}
+h1{
+    color: aliceblue;
+    float: left;
+}
+
+
+
+input{
+    margin-bottom: 6px;
+    padding: 5px;
+    font-size: 16px;
+    width: 80%;
+    justify-content: center
+}
+
+#in_buscar{
+    margin: 4px;
+    padding: 10px;
+    font-size: 20px;
+    width: 95%;
+    justify-content: center;
+    /*height: 100%;*/
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+.btnBuscar{
+    width: 100%;
+    color: black;
+    font-size:20px;
+    align-content: center;
+    align-items: center;
+    /*text-align: justify;*/
+    vertical-align: middle;
+    background-color:darkturquoise;
+    padding: 6px;
+    font-family: cursive;
+    cursor: pointer;
+    font-size-adjust: auto;
+    margin: 0;
+    border-radius: 7px;
+    
+}
+.btnCrear{
+    width: 100%;
+    color: black;
+    font-size:17px;
+    background-color:darkturquoise;
+    padding: 6px;
+    font-family: cursive;
+    cursor: pointer;
+    font-size-adjust: auto;
+    margin: 1px; 
+    border-radius: 7px;
+    
+}
+
+
+
+legend{
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 2px;
+    position: relative;
+    justify-content: center;
+    margin: auto; 
+    width: 95%;
+    max-width: 500px;
+    top: 48px;
+    
+}
+ 
+#ver-clientes{
+    color: aliceblue;
+    width: 100%;
+    
+}
+
+#lista_clientes {
+    height: auto;
+    }
+
+
+table {
+    
+    position: relative;
+    top: 55px;
+    justify-content: center;
+    margin: auto; 
+    width: 95%;
+    max-width: 500px;
+    /*padding: 2px 10px 2px 10px;
+    border: 5px solid  white;*/
+    border-radius: 10px;
+    border-bottom-left-radius:10px;
+    height: auto;
+    background-color: darkturquoise;
+     
+}
+span{
+    
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 22px;
+    color: blue;
+    border: 1px solid black;
+}
+
+#lista_clientes th{
+    font-weight: 700;
+    background-color: darkturquoise;
+    color: black;
+    border:none;
+}
+
+#lista_clientes tr{
+    font-weight: 500;
+    background: white;
+}
